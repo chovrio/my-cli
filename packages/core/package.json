@@ -2,7 +2,9 @@
   "name": "@my-cli/core",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+  "bin": {
+    "mycli": "./bin/index.js"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -15,10 +17,25 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "unbuild"
+    "test": "vitest",
+    "build": "unbuild",
+    "dev": "unbuild --stud"
   },
   "keywords": [],
   "author": "chovrio",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "execa": "6.1.0",
+    "fs-extra": "11.1.0",
+    "inquirer": "8.2.4",
+    "np": "7.6.2",
+    "ora": "5.0.0",
+    "sade": "1.8.1",
+    "semver": "7.3.8",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^9.0.3"
+  }
 }

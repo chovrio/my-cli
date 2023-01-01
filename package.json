@@ -6,7 +6,6 @@
   "scripts": {
     "prepare": "husky install",
     "build": "pnpm -rf build",
-    "push": "git add . && git-cz",
     "commit": "git-cz",
     "test": "vitest",
     "coverage": "vitest run --coverage"
